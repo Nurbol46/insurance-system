@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Админ-панель</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand">Insurance Company</a>
+      <nav class="site-nav">
+        <a href="index.html">Главная</a>
+        <a href="services.html">Каталог услуг</a>
+        <a href="application.html">Онлайн заявка</a>
+        <a href="admin.html">Админ-панель</a>
+      </nav>
+      <div class="auth-links"></div>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    <h1>Админ-панель</h1>
+    <p>Управление услугами, клиентами, заявками и статистикой.</p>
+
+    <section class="admin-section">
+      <h2>Статистика</h2>
+      <div id="stats-grid" class="stats-grid"></div>
+    </section>
+
+    <section class="admin-section">
+      <h2>Добавление страховой услуги</h2>
+      <form id="service-form" class="form-card">
+        <label>Название
+          <input type="text" name="title" required />
+        </label>
+        <label>Описание
+          <textarea name="description" required></textarea>
+        </label>
+        <label>Категория
+          <select name="category" required>
+            <option value="auto">Авто</option>
+            <option value="health">Медицина</option>
+            <option value="property">Имущество</option>
+            <option value="life">Жизнь</option>
+          </select>
+        </label>
+        <label>Цена (₸/год)
+          <input type="number" name="price" min="0" required />
+        </label>
+        <button type="submit" class="button">Добавить услугу</button>
+        <p id="service-feedback" class="feedback"></p>
+      </form>
+    </section>
+
+    <section class="admin-section">
+      <h2>Страховые услуги</h2>
+      <div class="table-wrap">
+        <table id="services-table" class="data-table">
+          <thead>
+            <tr><th>Название</th><th>Категория</th><th>Цена</th><th>Действия</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="admin-section">
+      <h2>Клиенты</h2>
+      <div class="table-wrap">
+        <table id="clients-table" class="data-table">
+          <thead>
+            <tr><th>Имя</th><th>Email</th><th>Телефон</th><th>Регистрация</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="admin-section">
+      <h2>Заявки — одобрение / отклонение</h2>
+      <div class="table-wrap">
+        <table id="applications-table" class="data-table">
+          <thead>
+            <tr><th>Клиент</th><th>Услуга</th><th>Статус</th><th>Действия</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Страховая фирма — Админ-панель</p>
+    </div>
+  </footer>
+  <script src="js/api.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

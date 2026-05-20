@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Личный кабинет</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container">
+      <a href="index.html" class="brand">Insurance Company</a>
+      <nav class="site-nav">
+        <a href="index.html">Главная</a>
+        <a href="services.html">Каталог услуг</a>
+        <a href="application.html">Онлайн заявка</a>
+        <a href="status.html">Статус полиса</a>
+        <a href="contact.html">Контакты</a>
+      </nav>
+      <div class="auth-links"></div>
+    </div>
+  </header>
+
+  <main class="container page-content">
+    <h1>Личный кабинет клиента</h1>
+    <p>Добро пожаловать, <strong id="user-name">клиент</strong>!</p>
+
+    <section class="dashboard-panel">
+      <article>
+        <h2>Активные полисы</h2>
+        <ul id="policies-list">
+          <li>Загрузка...</li>
+        </ul>
+        <a href="status.html" class="button">Проверить статус</a>
+      </article>
+      <article>
+        <h2>Мои заявки</h2>
+        <ul id="applications-list">
+          <li>Загрузка...</li>
+        </ul>
+        <a href="application.html" class="button">Новая заявка</a>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© 2026 Страховая фирма — Система управления полисами</p>
+    </div>
+  </footer>
+  <script src="js/api.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
