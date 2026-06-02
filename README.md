@@ -6,7 +6,7 @@
 
 - **Frontend:** HTML, CSS, JavaScript
 - **Backend:** Node.js, Express.js
-- **База данных:** MongoDB
+- **База данных:** SQLite
 
 ## Функциональность
 
@@ -28,24 +28,14 @@
 
 ## Запуск проекта
 
-### 1. MongoDB (необязательно)
-
-Если MongoDB **не установлена**, сервер сам запустит встроенную базу при `npm start`.
-
-Для постоянного хранения данных установите MongoDB и запустите её:
-
-```bash
-sudo systemctl start mongod
-```
-
-### 2. Установите зависимости
+### 1. Установите зависимости
 
 ```bash
 cd insurance-system
 npm install
 ```
 
-### 3. Запустите сервер
+### 2. Запустите сервер
 
 ```bash
 npm start
@@ -53,11 +43,6 @@ npm start
 
 Откройте в браузере: **http://localhost:3000**
 
-## Учётные данные администратора
-
-| Email | Пароль |
-|-------|--------|
-| admin@insurance.kz | admin123 |
 
 ## Структура проекта
 
@@ -80,7 +65,7 @@ insurance-system/
 
 ```
 PORT=3000
-MONGODB_URI=mongodb://127.0.0.1:27017/insurance_db
+SQLITE_PATH=./data/insurance.db
 JWT_SECRET=your_secret_key_here
 ```
 # insurance-system

@@ -77,10 +77,9 @@ async function updateApplicationStatus(req, res) {
   await application.save();
 
   if (status === 'approved') {
-    let user = application.user;
-    if (!user) {
-      user = await User.findOne({ email: application.email.toLowerCase() });
-    }
+    const user =
+      (application.user ? await User.findById(application.user) : null) ||
+      (await User.findOne({ email: application.email.toLowerCase() }));
 
     if (user) {
       const existing = await Policy.findOne({ application: application._id });

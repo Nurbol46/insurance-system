@@ -22,7 +22,7 @@ async function start() {
     });
   } catch (error) {
     console.error('Ошибка запуска:', error.message);
-    console.error('Убедитесь, что MongoDB запущена (mongodb://127.0.0.1:27017)');
+    console.error('Проверьте путь к файлу SQLite (переменная SQLITE_PATH в .env)');
     process.exit(1);
   }
 }
